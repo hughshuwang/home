@@ -1,5 +1,5 @@
 ## Configuration Notes for macOS and Linux
-Created 11-12-2018 by Hugh
+Created 11-12-2018 by Hugh  
 MacBook Pro & Ubuntu Server 18.10
 
 ### macOS software
@@ -54,4 +54,5 @@ MacBook Pro & Ubuntu Server 18.10
     - pip install neovim module in python
     - Neovim, ncm not working in macOS, cannot debug
     - use Linux for command line programming
+    - Install Texlive
     - Install htop

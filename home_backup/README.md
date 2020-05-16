@@ -1,4 +1,6 @@
-# Quick Notes on Bundle Install
+## Install
+
+Quick notes, tested on Ubuntu 20.04 on 05/16/20.
 
 - Prep
     - sudo apt-get install ctags

@@ -30,6 +30,7 @@ let mapleader = "\<space>"
 " share clipboard with macOS
 " used for paste to terminal for REPL
 set clipboard=unnamed
+set foldmethod=marker
 
 " NERDTree setups
 nmap nt :NERDTreeToggle<CR>
@@ -39,7 +40,7 @@ let NERDTreeShowHidden=1
 " Tlist setups
 nmap tl :TlistToggle<CR>
 let Tlist_WinWidth=30
-let Tlist_Use_Right_Window=1
+let Tlist_Use_Right_Window=0
 let Tlist_Auto_Update=1
 let Tlist_File_Fold_Auto_Close=1
 let Tlist_Exit_OnlyWindow=1
@@ -73,6 +74,9 @@ nnoremap <leader>v :vertical terminal<CR>
 
 " buffertabs, deprecated, installed with airline
 " nnoremap <leader>n :bnext<CR>
+
+nnoremap <leader>[ <C-b>
+nnoremap <leader>] <C-f>
 
 " Elegant splitting
 nnoremap <leader><Tab> <C-W><C-W>
@@ -110,6 +114,22 @@ catch
 endtry
 
 
+
+" COLORSCHEME SECTION "
+
+" gruvbox dark
+autocmd vimenter * colorscheme gruvbox
+set bg=dark
+
+" onehalfdark custom section
+" colorscheme onehalfdark
+" highlight Normal cterm=NONE ctermbg=234
+" highlight CursorLine cterm=NONE ctermbg=235
+" highlight LineNr cterm=NONE ctermbg=234
+" highlight VertSplit cterm=NONE ctermbg=234
+
+
+
 " VUNDLE PLUGIN SECTION "
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -123,6 +143,28 @@ call vundle#begin()
 " jupyter support " NOT WORKING
 " Plugin 'jupyter-vim/jupyter-vim'
 
+" Vim-codefmt
+" Add maktaba and codefmt to the runtimepath.
+" (The latter must be installed before it can be used.)
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+" Also add Glaive, which is used to configure codefmt's maktaba flags. See
+" `:help :Glaive` for usage.
+Plugin 'google/vim-glaive'
+
+" Jedi python autocomplete
+Plugin 'davidhalter/jedi-vim'
+
+" Grovbox
+Plugin 'morhetz/gruvbox'
+
+" Git Support
+Plugin 'tpope/vim-fugitive'
+
+" Quick Surround 
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -131,11 +173,6 @@ Plugin 'yegappan/taglist', {'rtp': 'vim/'}
 
 " one half colorscheme
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
-colorscheme onehalfdark
-highlight Normal cterm=NONE ctermbg=234
-highlight CursorLine cterm=NONE ctermbg=235
-highlight LineNr cterm=NONE ctermbg=234
-highlight VertSplit cterm=NONE ctermbg=234
 
 " aux bar airline
 Plugin 'vim-airline/vim-airline'

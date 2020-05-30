@@ -30,7 +30,7 @@ let mapleader = "\<space>"
 " share clipboard with macOS
 " used for paste to terminal for REPL
 set clipboard=unnamed
-set foldmethod=marker
+" set foldmethod=marker
 
 " NERDTree setups
 nmap nt :NERDTreeToggle<CR>

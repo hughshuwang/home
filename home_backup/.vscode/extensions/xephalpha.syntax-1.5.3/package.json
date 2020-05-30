@@ -1,0 +1,44 @@
+{
+	"name": "syntax",
+	"displayName": "syntax",
+	"description": "Simple light and dark theme for VS Code.",
+	"version": "1.5.3",
+	"publisher": "XephAlpha",
+	"engines": {
+		"vscode": "^1.26.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"theme",
+		"syntax",
+		"material",
+		"dark",
+		"light"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/XephAlpha/Syntax-Theme.git"
+	},
+	"icon": "icon.png",
+	"contributes": {
+		"themes": [
+			{
+				"label": "Syntax Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Syntax Dark-color-theme.json"
+			},
+			{
+				"label": "Syntax Light",
+				"uiTheme": "vs",
+				"path": "./themes/Syntax Light-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "0962a698-f096-4ae3-8102-c700b5a637e9",
+		"publisherId": "01517c57-4855-4186-a003-376b796d84c0",
+		"publisherDisplayName": "XephAlpha"
+	}
+}

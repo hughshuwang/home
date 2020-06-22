@@ -1,0 +1,112 @@
+2020-06-20 11:59:08,341 DEBUG    root            Loaded Command Group: [u'gcloud', u'init']
+2020-06-20 11:59:08,344 DEBUG    root            Running [gcloud.init] with arguments: []
+2020-06-20 11:59:08,344 INFO     ___FILE_ONLY___ Welcome! This command will take you through the configuration of gcloud.
+
+
+2020-06-20 11:59:08,345 INFO     ___FILE_ONLY___ Settings from your current configuration [default] are:
+
+2020-06-20 11:59:08,447 INFO     ___FILE_ONLY___ core:
+  account: shuswg@gmail.com
+  disable_usage_reporting: 'True'
+
+2020-06-20 11:59:08,448 INFO     ___FILE_ONLY___ 
+
+2020-06-20 11:59:34,440 INFO     ___FILE_ONLY___ Your current configuration has been set to: [default]
+
+
+2020-06-20 11:59:34,440 INFO     ___FILE_ONLY___ You can skip diagnostics next time by using the following flag:
+
+2020-06-20 11:59:34,440 INFO     ___FILE_ONLY___   gcloud init --skip-diagnostics
+
+
+2020-06-20 11:59:34,441 INFO     ___FILE_ONLY___ Network diagnostic detects and fixes local network connection issues.
+
+2020-06-20 11:59:34,442 INFO     ___FILE_ONLY___ Checking network connection...
+2020-06-20 11:59:35,463 INFO     ___FILE_ONLY___ Reachability Check passed.
+
+2020-06-20 11:59:35,463 INFO     ___FILE_ONLY___ Network diagnostic passed (1/1 checks passed).
+
+
+2020-06-20 11:59:39,043 INFO     ___FILE_ONLY___ You are logged in as: [shuswg@gmail.com].
+
+
+2020-06-20 12:03:46,288 INFO     ___FILE_ONLY___ Your current project has been set to: [teak-cyclist-280915].
+
+
+2020-06-20 12:03:46,334 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-06-20 12:03:46,365 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'project_info']
+2020-06-20 12:03:46,376 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'project-info', u'describe']
+2020-06-20 12:03:46,377 INFO     root            Executing: [gcloud compute project-info describe --quiet]
+2020-06-20 12:03:46,383 DEBUG    root            Running [gcloud.compute.project-info.describe] with arguments: [--no-user-output-enabled: "false", --quiet: "True", --verbosity: "none"]
+2020-06-20 12:03:46,711 DEBUG    root            (gcloud.compute.project-info.describe) HTTPError 403: Access Not Configured. Compute Engine API has not been used in project 884648968654 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=884648968654 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+Traceback (most recent call last):
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 983, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/Users/shu/google-cloud-sdk/lib/surface/compute/project_info/describe.py", line 39, in Run
+    project=project_ref.projectId))])[0]
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/client_adapter.py", line 100, in MakeRequests
+    timeout=timeout))
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/request_helper.py", line 263, in MakeRequests
+    requests=requests, http=http, batch_url=batch_url)
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/batch_helper.py", line 106, in MakeRequests
+    batch_request_callback=batch_checker.BatchCheck)
+  File "/Users/shu/google-cloud-sdk/lib/third_party/apitools/base/py/batch.py", line 226, in Execute
+    batch_http_request.Execute(http)
+  File "/Users/shu/google-cloud-sdk/lib/third_party/apitools/base/py/batch.py", line 506, in Execute
+    self.__callback(response, exception)
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/batch_helper.py", line 73, in BatchCheck
+    is_batch_request=True)
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/apis.py", line 261, in PromptToEnableApi
+    raise exception
+HttpException: HTTPError 403: Access Not Configured. Compute Engine API has not been used in project 884648968654 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=884648968654 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+2020-06-20 12:03:46,717 ERROR    root            (gcloud.compute.project-info.describe) HTTPError 403: Access Not Configured. Compute Engine API has not been used in project 884648968654 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=884648968654 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+2020-06-20 12:03:46,717 INFO     root            [compute project-info describe --quiet] has failed
+
+2020-06-20 12:03:46,718 INFO     ___FILE_ONLY___ Not setting default zone/region (this feature makes it easier to use
+[gcloud compute] by setting an appropriate default value for the
+--zone and --region flag).
+See https://cloud.google.com/compute/docs/gcloud-compute section on how to set
+default compute region and zone manually. If you would like [gcloud init] to be
+able to do this for you the next time you run it, make sure the
+Compute Engine API is enabled for your project on the
+https://console.developers.google.com/apis page.
+
+
+2020-06-20 12:03:46,718 DEBUG    root            Executing command: [u'/Users/shu/google-cloud-sdk/bin/gsutil', u'config', u'-n', u'-o', u'/Users/shu/.boto']
+2020-06-20 12:03:48,783 DEBUG    ___FILE_ONLY___ 
+2020-06-20 12:03:48,783 DEBUG    ___FILE_ONLY___ This command will create a boto config file at /Users/shu/.boto
+containing your credentials, based on your responses to the following
+questions.
+
+Boto config file "/Users/shu/.boto" created. If you need to use a
+proxy to access the Internet please see the instructions in that file.
+
+2020-06-20 12:03:48,783 INFO     ___FILE_ONLY___ Created a default .boto configuration file at [/Users/shu/.boto]. See this file and
+[https://cloud.google.com/storage/docs/gsutil/commands/config] for more
+information about configuring Google Cloud Storage.
+
+2020-06-20 12:03:48,783 INFO     ___FILE_ONLY___ Your Google Cloud SDK is configured and ready to use!
+
+
+2020-06-20 12:03:48,784 INFO     ___FILE_ONLY___ * Commands that require authentication will use shuswg@gmail.com by default
+
+2020-06-20 12:03:48,784 INFO     ___FILE_ONLY___ * Commands will reference project `teak-cyclist-280915` by default
+
+2020-06-20 12:03:48,784 INFO     ___FILE_ONLY___ Run `gcloud help config` to learn how to change individual settings
+
+
+2020-06-20 12:03:48,784 INFO     ___FILE_ONLY___ This gcloud configuration is called [default]. You can create additional configurations if you work with multiple accounts and/or projects.
+
+2020-06-20 12:03:48,785 INFO     ___FILE_ONLY___ Run `gcloud topic configurations` to learn more.
+
+
+2020-06-20 12:03:48,785 INFO     ___FILE_ONLY___ Some things to try next:
+
+
+2020-06-20 12:03:48,785 INFO     ___FILE_ONLY___ * Run `gcloud --help` to see the Cloud Platform services you can interact with. And run `gcloud help COMMAND` to get help on any gcloud command.
+
+2020-06-20 12:03:48,785 INFO     ___FILE_ONLY___ * Run `gcloud topic --help` to learn about advanced features of the SDK like arg files and output formatting
+
+2020-06-20 12:03:48,787 INFO     root            Display format: "default"

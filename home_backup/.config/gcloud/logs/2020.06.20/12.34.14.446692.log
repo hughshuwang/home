@@ -1,0 +1,58 @@
+2020-06-20 12:34:14,455 DEBUG    root            Loaded Command Group: [u'gcloud', u'init']
+2020-06-20 12:34:14,457 DEBUG    root            Running [gcloud.init] with arguments: []
+2020-06-20 12:34:14,457 INFO     ___FILE_ONLY___ Welcome! This command will take you through the configuration of gcloud.
+
+
+2020-06-20 12:34:14,459 INFO     ___FILE_ONLY___ Settings from your current configuration [default] are:
+
+2020-06-20 12:34:14,463 INFO     ___FILE_ONLY___ core:
+  account: shuswg@gmail.com
+  disable_usage_reporting: 'True'
+  project: teak-cyclist-280915
+
+2020-06-20 12:34:14,463 INFO     ___FILE_ONLY___ 
+
+2020-06-20 12:34:23,410 INFO     ___FILE_ONLY___ Your current configuration has been set to: [default]
+
+
+2020-06-20 12:34:23,410 INFO     ___FILE_ONLY___ You can skip diagnostics next time by using the following flag:
+
+2020-06-20 12:34:23,410 INFO     ___FILE_ONLY___   gcloud init --skip-diagnostics
+
+
+2020-06-20 12:34:23,410 INFO     ___FILE_ONLY___ Network diagnostic detects and fixes local network connection issues.
+
+2020-06-20 12:34:23,411 INFO     ___FILE_ONLY___ Checking network connection...
+2020-06-20 12:34:24,426 INFO     ___FILE_ONLY___ Reachability Check passed.
+
+2020-06-20 12:34:24,426 INFO     ___FILE_ONLY___ Network diagnostic passed (1/1 checks passed).
+
+
+2020-06-20 12:34:27,137 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth']
+2020-06-20 12:34:27,286 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'login']
+2020-06-20 12:34:27,288 INFO     root            Executing: [gcloud auth login --force --brief]
+2020-06-20 12:34:27,290 DEBUG    root            Running [gcloud.auth.login] with arguments: [--brief: "True", --force: "True"]
+2020-06-20 12:34:27,509 INFO     ___FILE_ONLY___ Your browser has been opened to visit:
+
+    https://accounts.google.com/o/oauth2/auth?code_challenge=dQlzkTKiJxRm3Rx77euQ7kypz5tNlmdVqYbBROk5Cdo&prompt=select_account&code_challenge_method=S256&access_type=offline&redirect_uri=http%3A%2F%2Flocalhost%3A8085%2F&response_type=code&client_id=32555940559.apps.googleusercontent.com&scope=openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth
+
+
+
+2020-06-20 12:34:35,044 INFO     oauth2client.client Successfully retrieved access token
+2020-06-20 12:34:35,075 INFO     root            Display format: "none"
+2020-06-20 12:34:35,100 INFO     ___FILE_ONLY___ You are logged in as: [hugh.shu.wang@gmail.com].
+
+
+2020-06-20 12:35:16,362 WARNING  root            Project creation failed: HttpError accessing <https://cloudresourcemanager.googleapis.com/v1/projects?alt=json>: response: <{'status': '409', 'content-length': '119', 'x-xss-protection': '0', 'x-content-type-options': 'nosniff', 'transfer-encoding': 'chunked', 'vary': 'Origin, X-Origin, Referer', 'server': 'ESF', 'server-timing': 'gfet4t7; dur=317', '-content-encoding': 'gzip', 'cache-control': 'private', 'date': 'Sat, 20 Jun 2020 16:35:16 GMT', 'x-frame-options': 'SAMEORIGIN', 'alt-svc': 'h3-28=":443"; ma=2592000,h3-27=":443"; ma=2592000,h3-25=":443"; ma=2592000,h3-T050=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"', 'content-type': 'application/json; charset=UTF-8'}>, content <{
+  "error": {
+    "code": 409,
+    "message": "Requested entity already exists",
+    "status": "ALREADY_EXISTS"
+  }
+}
+>
+Please make sure to create the project [kaggle] using
+    $ gcloud projects create kaggle
+or change to another project using
+    $ gcloud config set project <PROJECT ID>
+2020-06-20 12:35:16,364 INFO     root            Display format: "default"

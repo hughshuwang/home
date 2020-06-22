@@ -1,0 +1,27 @@
+2020-06-21 20:08:28,721 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-06-21 20:08:28,746 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'start_iap_tunnel']
+2020-06-21 20:08:28,750 DEBUG    root            Running [gcloud.compute.start-iap-tunnel] with arguments: [--listen-on-stdin: "True", --project: "kaggle-backstage", --verbosity: "warning", --zone: "us-east1-c", INSTANCE_NAME: "dl-1-vm", INSTANCE_PORT: "22"]
+2020-06-21 20:08:29,287 INFO     oauth2client.client Refreshing access_token
+2020-06-21 20:08:29,409 INFO     root            Connecting with URL [u'wss://tunnel.cloudproxy.app/v4/connect?project=kaggle-backstage&instance=dl-1-vm&interface=nic0&port=22&zone=us-east1-c']
+2020-06-21 20:08:29,612 INFO     root            Received WebSocket Close message [4033: u'not authorized'].
+2020-06-21 20:08:29,617 INFO     root            Client closed connection from [stdin].
+2020-06-21 20:08:29,617 DEBUG    root            (gcloud.compute.start-iap-tunnel) Error while connecting [4033: u'not authorized'].
+Traceback (most recent call last):
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 983, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/Users/shu/google-cloud-sdk/lib/surface/compute/start_iap_tunnel.py", line 90, in Run
+    iap_tunnel_helper.Run()
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/command_lib/compute/iap_tunnel.py", line 578, in Run
+    self._RunReceiveLocalData(_StdinSocket(), 'stdin')
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/command_lib/compute/iap_tunnel.py", line 452, in _RunReceiveLocalData
+    functools.partial(_GetAccessTokenCallback, store.LoadIfEnabled()))
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/command_lib/compute/iap_tunnel.py", line 424, in _InitiateWebSocketConnection
+    new_websocket.InitiateConnection()
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/iap_tunnel_websocket.py", line 131, in InitiateConnection
+    self._WaitForOpenOrRaiseError()
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/iap_tunnel_websocket.py", line 336, in _WaitForOpenOrRaiseError
+    raise ConnectionCreationError(error_msg)
+ConnectionCreationError: Error while connecting [4033: u'not authorized'].
+2020-06-21 20:08:29,621 ERROR    root            (gcloud.compute.start-iap-tunnel) Error while connecting [4033: u'not authorized'].

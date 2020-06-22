@@ -1,0 +1,88 @@
+2020-06-21 19:46:33,263 DEBUG    root            Loaded Command Group: [u'gcloud', u'init']
+2020-06-21 19:46:33,267 DEBUG    root            Running [gcloud.init] with arguments: []
+2020-06-21 19:46:33,268 INFO     ___FILE_ONLY___ Welcome! This command will take you through the configuration of gcloud.
+
+
+2020-06-21 19:46:33,269 INFO     ___FILE_ONLY___ Settings from your current configuration [default] are:
+
+2020-06-21 19:46:33,383 INFO     ___FILE_ONLY___ core:
+  disable_usage_reporting: 'True'
+
+2020-06-21 19:46:33,383 INFO     ___FILE_ONLY___ 
+
+2020-06-21 19:46:35,504 INFO     ___FILE_ONLY___ Your current configuration has been set to: [default]
+
+
+2020-06-21 19:46:35,505 INFO     ___FILE_ONLY___ You can skip diagnostics next time by using the following flag:
+
+2020-06-21 19:46:35,505 INFO     ___FILE_ONLY___   gcloud init --skip-diagnostics
+
+
+2020-06-21 19:46:35,505 INFO     ___FILE_ONLY___ Network diagnostic detects and fixes local network connection issues.
+
+2020-06-21 19:46:35,506 INFO     ___FILE_ONLY___ Checking network connection...
+2020-06-21 19:46:36,524 INFO     ___FILE_ONLY___ Reachability Check passed.
+
+2020-06-21 19:46:36,524 INFO     ___FILE_ONLY___ Network diagnostic passed (1/1 checks passed).
+
+
+2020-06-21 19:46:38,668 INFO     ___FILE_ONLY___ You are logged in as: [hugh.shu.wang@gmail.com].
+
+
+2020-06-21 19:46:38,674 INFO     oauth2client.client Refreshing access_token
+2020-06-21 19:46:41,172 INFO     ___FILE_ONLY___ Your current project has been set to: [kaggle-backstage].
+
+
+2020-06-21 19:46:41,214 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-06-21 19:46:41,218 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'project_info']
+2020-06-21 19:46:41,234 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'project-info', u'describe']
+2020-06-21 19:46:41,235 INFO     root            Executing: [gcloud compute project-info describe --quiet]
+2020-06-21 19:46:41,239 DEBUG    root            Running [gcloud.compute.project-info.describe] with arguments: [--no-user-output-enabled: "false", --quiet: "True", --verbosity: "none"]
+2020-06-21 19:46:42,093 INFO     root            Display disabled.
+2020-06-21 19:46:45,118 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'zones']
+2020-06-21 19:46:45,125 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'zones', u'list']
+2020-06-21 19:46:45,127 INFO     root            Executing: [gcloud compute zones list]
+2020-06-21 19:46:45,129 DEBUG    root            Running [gcloud.compute.zones.list] with arguments: [--no-user-output-enabled: "false", --verbosity: "none"]
+2020-06-21 19:46:45,141 INFO     root            Display disabled.
+2020-06-21 19:46:50,712 INFO     ___FILE_ONLY___ Your project default Compute Engine zone has been set to [us-east1-b].
+You can change it by running [gcloud config set compute/zone NAME].
+
+
+2020-06-21 19:46:50,714 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'regions']
+2020-06-21 19:46:50,717 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'regions', u'describe']
+2020-06-21 19:46:50,718 INFO     root            Executing: [gcloud compute regions describe https://www.googleapis.com/compute/v1/projects/kaggle-backstage/regions/us-east1]
+2020-06-21 19:46:50,721 DEBUG    root            Running [gcloud.compute.regions.describe] with arguments: [--no-user-output-enabled: "false", --verbosity: "none", NAME: "https://www.googleapis.com/compute/v1/projects/kaggle-backstage/regions/us-east1"]
+2020-06-21 19:46:51,104 INFO     root            Display disabled.
+2020-06-21 19:46:51,114 INFO     ___FILE_ONLY___ Your project default Compute Engine region has been set to [us-east1].
+You can change it by running [gcloud config set compute/region NAME].
+
+
+2020-06-21 19:46:51,115 DEBUG    root            Not configuring default .boto file. File already exists at [/Users/shu/.boto].
+2020-06-21 19:46:51,115 INFO     ___FILE_ONLY___ Your Google Cloud SDK is configured and ready to use!
+
+
+2020-06-21 19:46:51,116 INFO     ___FILE_ONLY___ * Commands that require authentication will use hugh.shu.wang@gmail.com by default
+
+2020-06-21 19:46:51,118 INFO     ___FILE_ONLY___ * Commands will reference project `kaggle-backstage` by default
+
+2020-06-21 19:46:51,118 INFO     ___FILE_ONLY___ * Compute Engine commands will use region `us-east1` by default
+
+2020-06-21 19:46:51,119 INFO     ___FILE_ONLY___ * Compute Engine commands will use zone `us-east1-b` by default
+
+
+2020-06-21 19:46:51,119 INFO     ___FILE_ONLY___ Run `gcloud help config` to learn how to change individual settings
+
+
+2020-06-21 19:46:51,120 INFO     ___FILE_ONLY___ This gcloud configuration is called [default]. You can create additional configurations if you work with multiple accounts and/or projects.
+
+2020-06-21 19:46:51,120 INFO     ___FILE_ONLY___ Run `gcloud topic configurations` to learn more.
+
+
+2020-06-21 19:46:51,120 INFO     ___FILE_ONLY___ Some things to try next:
+
+
+2020-06-21 19:46:51,120 INFO     ___FILE_ONLY___ * Run `gcloud --help` to see the Cloud Platform services you can interact with. And run `gcloud help COMMAND` to get help on any gcloud command.
+
+2020-06-21 19:46:51,121 INFO     ___FILE_ONLY___ * Run `gcloud topic --help` to learn about advanced features of the SDK like arg files and output formatting
+
+2020-06-21 19:46:51,122 INFO     root            Display format: "default"

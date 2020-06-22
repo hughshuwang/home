@@ -1,0 +1,43 @@
+2020-06-21 19:50:11,209 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-06-21 19:50:11,232 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'ssh']
+2020-06-21 19:50:11,236 DEBUG    root            Running [gcloud.compute.ssh] with arguments: [[USER@]INSTANCE: "dl-1-vm"]
+2020-06-21 19:50:12,014 DEBUG    root            SSH Known Hosts File [/Users/shu/.ssh/google_compute_known_hosts] could not be opened: Unable to read file [/Users/shu/.ssh/google_compute_known_hosts]: [Errno 2] No such file or directory: '/Users/shu/.ssh/google_compute_known_hosts'
+2020-06-21 19:50:12,015 DEBUG    root            Current SSH keys in project: []
+2020-06-21 19:50:12,015 INFO     ___FILE_ONLY___ Updating project ssh metadata...
+2020-06-21 19:50:13,034 DEBUG    root            Operations to inspect: [<Operation
+ id: 2701865581904284891
+ insertTime: u'2020-06-21T16:50:12.538-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1592783412041-5a8a0c97a95d3-026e1517-ceed087f'
+ operationType: u'compute.projects.setCommonInstanceMetadata'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/kaggle-backstage/global/operations/operation-1592783412041-5a8a0c97a95d3-026e1517-ceed087f'
+ startTime: u'2020-06-21T16:50:12.542-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 993687165635
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/kaggle-backstage'
+ user: u'hugh.shu.wang@gmail.com'
+ warnings: []>]
+2020-06-21 19:50:29,725 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2020-06-21T16:50:29.378-07:00'
+ id: 2701865581904284891
+ insertTime: u'2020-06-21T16:50:12.538-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1592783412041-5a8a0c97a95d3-026e1517-ceed087f'
+ operationType: u'compute.projects.setCommonInstanceMetadata'
+ progress: 100
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/kaggle-backstage/global/operations/operation-1592783412041-5a8a0c97a95d3-026e1517-ceed087f'
+ startTime: u'2020-06-21T16:50:12.542-07:00'
+ status: StatusValueValuesEnum(DONE, 0)
+ targetId: 993687165635
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/kaggle-backstage'
+ user: u'hugh.shu.wang@gmail.com'
+ warnings: []>]
+2020-06-21 19:50:29,726 INFO     ___FILE_ONLY___ Updated [https://www.googleapis.com/compute/v1/projects/kaggle-backstage].
+
+2020-06-21 19:50:30,121 INFO     ___FILE_ONLY___ Waiting for SSH key to propagate.
+
+2020-06-21 19:50:30,123 DEBUG    root            Running command [/usr/bin/ssh -T -i /Users/shu/.ssh/google_compute_engine -o CheckHostIP=no -o HostKeyAlias=compute.1268308693678706351 -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o UserKnownHostsFile=/Users/shu/.ssh/google_compute_known_hosts shu@35.237.237.30 -- true].
+2020-06-21 19:50:30,124 DEBUG    root            Executing command: [u'/usr/bin/ssh', u'-T', u'-i', u'/Users/shu/.ssh/google_compute_engine', u'-o', u'CheckHostIP=no', u'-o', u'HostKeyAlias=compute.1268308693678706351', u'-o', u'IdentitiesOnly=yes', u'-o', u'StrictHostKeyChecking=no', u'-o', u'UserKnownHostsFile=/Users/shu/.ssh/google_compute_known_hosts', u'shu@35.237.237.30', u'--', u'true']
+2020-06-21 19:51:06,953 DEBUG    root            Running command [/usr/bin/ssh -t -i /Users/shu/.ssh/google_compute_engine -o CheckHostIP=no -o HostKeyAlias=compute.1268308693678706351 -o IdentitiesOnly=yes -o StrictHostKeyChecking=no -o UserKnownHostsFile=/Users/shu/.ssh/google_compute_known_hosts shu@35.237.237.30].
+2020-06-21 19:51:06,954 DEBUG    root            Executing command: [u'/usr/bin/ssh', u'-t', u'-i', u'/Users/shu/.ssh/google_compute_engine', u'-o', u'CheckHostIP=no', u'-o', u'HostKeyAlias=compute.1268308693678706351', u'-o', u'IdentitiesOnly=yes', u'-o', u'StrictHostKeyChecking=no', u'-o', u'UserKnownHostsFile=/Users/shu/.ssh/google_compute_known_hosts', u'shu@35.237.237.30']

@@ -4,7 +4,6 @@
 set nocompatible
 set runtimepath+=~/.vim_runtime
 set encoding=utf-8
-filetype off
 
 syntax enable
 set number relativenumber
@@ -66,6 +65,9 @@ nmap wm :WMToggle<CR>
 " quitting
 nnoremap <leader>q :q<CR>
 
+" highlight searching
+nnoremap <leader>/ :set hlsearch!<CR>
+
 " Remap Escape to quit terminal normal
 " https://github.com/vim/vim/issues/2216
 tnoremap <Esc> <C-\><C-N> 
@@ -114,7 +116,6 @@ catch
 endtry
 
 
-
 " COLORSCHEME SECTION "
 
 " gruvbox dark
@@ -127,7 +128,6 @@ set bg=dark
 " highlight CursorLine cterm=NONE ctermbg=235
 " highlight LineNr cterm=NONE ctermbg=234
 " highlight VertSplit cterm=NONE ctermbg=234
-
 
 
 " VUNDLE PLUGIN SECTION "
@@ -152,8 +152,11 @@ Plugin 'google/vim-codefmt'
 " `:help :Glaive` for usage.
 Plugin 'google/vim-glaive'
 
+" csv supports
+Plugin 'chrisbra/csv.vim'
+
 " Jedi python autocomplete
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 
 " Grovbox
 Plugin 'morhetz/gruvbox'
@@ -178,8 +181,8 @@ Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " let g:airline_theme='onehalfdark' " third-party scheme
-let g:airline_theme='angr' " official airline scheme
-" alternatives: 'deus', 'angr', 'atomic'
+let g:airline_theme='raven' " official airline scheme
+" 'deus', 'angr', 'atomic', 'bubblegum', 'molokai', 'raven'
 
 " Plugin 'sillybun/vim-repl' " not usable, 051320
 
@@ -214,15 +217,7 @@ let python_highlight_all=1
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+" filetype plugin indent on    " required
 
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+filetype plugin on

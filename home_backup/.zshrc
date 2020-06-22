@@ -107,7 +107,7 @@ alias tl='trash-list'
 alias tr='trash-restore'
 
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
-ranger # open ranger at login
+# ranger # open ranger at login
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -126,3 +126,9 @@ unset __conda_setup
 
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/shu/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/shu/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/shu/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/shu/google-cloud-sdk/completion.zsh.inc'; fi

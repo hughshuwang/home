@@ -1,0 +1,72 @@
+2020-06-21 18:08:27,523 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute']
+2020-06-21 18:08:27,529 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'instances']
+2020-06-21 18:08:27,551 DEBUG    root            Loaded Command Group: [u'gcloud', u'compute', u'instances', u'create']
+2020-06-21 18:08:27,765 DEBUG    root            Running [gcloud.compute.instances.create] with arguments: [--accelerator: "OrderedDict([(u'type', 'nvidia-tesla-p100'), (u'count', 1)])", --boot-disk-size: "214748364800", --image-family: "pytorch-latest-gpu", --image-project: "deeplearning-platform-release", --machine-type: "n1-highmem-8", --maintenance-policy: "TERMINATE", --metadata: "OrderedDict([(u'install-nvidia-driver', u'True')])", --preemptible: "True", --zone: "us-central1-f", INSTANCE_NAMES:1: "[u'kaggle-backstage']"]
+2020-06-21 18:08:30,180 DEBUG    root            Operations to inspect: [<Operation
+ id: 4303796758774965426
+ insertTime: u'2020-06-21T15:08:29.889-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1592777308467-5a89f5dad727e-3c5cdc56-a598b010'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/kaggle-backstage/zones/us-central1-f/operations/operation-1592777308467-5a89f5dad727e-3c5cdc56-a598b010'
+ startTime: u'2020-06-21T15:08:29.893-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 5355516795094721714
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/kaggle-backstage/zones/us-central1-f/instances/kaggle-backstage'
+ user: u'hugh.shu.wang@gmail.com'
+ warnings: []
+ zone: u'https://www.googleapis.com/compute/v1/projects/kaggle-backstage/zones/us-central1-f'>]
+2020-06-21 18:08:55,985 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2020-06-21T15:08:55.617-07:00'
+ error: <ErrorValue
+ errors: [<ErrorsValueListEntry
+ code: u'QUOTA_EXCEEDED'
+ message: u"Quota 'GPUS_ALL_REGIONS' exceeded.  Limit: 0.0 globally.">]>
+ httpErrorMessage: u'FORBIDDEN'
+ httpErrorStatusCode: 403
+ id: 4303796758774965426
+ insertTime: u'2020-06-21T15:08:29.889-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1592777308467-5a89f5dad727e-3c5cdc56-a598b010'
+ operationType: u'insert'
+ progress: 100
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/kaggle-backstage/zones/us-central1-f/operations/operation-1592777308467-5a89f5dad727e-3c5cdc56-a598b010'
+ startTime: u'2020-06-21T15:08:29.893-07:00'
+ status: StatusValueValuesEnum(DONE, 0)
+ targetId: 5355516795094721714
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/kaggle-backstage/zones/us-central1-f/instances/kaggle-backstage'
+ user: u'hugh.shu.wang@gmail.com'
+ warnings: [<WarningsValueListEntry
+ code: CodeValueValuesEnum(DISK_SIZE_LARGER_THAN_IMAGE_SIZE, 3)
+ data: [<DataValueListEntry
+ key: u'disk_size_gb'
+ value: u'200'>, <DataValueListEntry
+ key: u'image_size_gb'
+ value: u'50'>]
+ message: u"Disk size: '200 GB' is larger than image size: '50 GB'. You might need to resize the root repartition manually if the operating system does not support automatic resizing. See https://cloud.google.com/compute/docs/disks/add-persistent-disk#resize_pd for details.">]
+ zone: u'https://www.googleapis.com/compute/v1/projects/kaggle-backstage/zones/us-central1-f'>]
+2020-06-21 18:08:55,986 WARNING  root            Some requests generated warnings:
+ - Disk size: '200 GB' is larger than image size: '50 GB'. You might need to resize the root repartition manually if the operating system does not support automatic resizing. See https://cloud.google.com/compute/docs/disks/add-persistent-disk#resize_pd for details.
+
+2020-06-21 18:08:55,987 DEBUG    root            (gcloud.compute.instances.create) Could not fetch resource:
+ - Quota 'GPUS_ALL_REGIONS' exceeded.  Limit: 0.0 globally.
+Traceback (most recent call last):
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 983, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/Users/shu/google-cloud-sdk/lib/surface/compute/instances/create.py", line 428, in Run
+    return compute_client.MakeRequests(requests)
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/client_adapter.py", line 103, in MakeRequests
+    errors, error_message='Could not fetch resource:')
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 119, in RaiseToolException
+    RaiseException(problems, calliope_exceptions.ToolException, error_message)
+  File "/Users/shu/google-cloud-sdk/lib/googlecloudsdk/api_lib/compute/utils.py", line 131, in RaiseException
+    errors))
+ToolException: Could not fetch resource:
+ - Quota 'GPUS_ALL_REGIONS' exceeded.  Limit: 0.0 globally.
+
+2020-06-21 18:08:55,992 ERROR    root            (gcloud.compute.instances.create) Could not fetch resource:
+ - Quota 'GPUS_ALL_REGIONS' exceeded.  Limit: 0.0 globally.
+

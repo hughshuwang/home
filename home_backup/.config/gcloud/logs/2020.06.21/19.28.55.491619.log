@@ -1,0 +1,38 @@
+2020-06-21 19:28:55,513 DEBUG    root            Loaded Command Group: [u'gcloud', u'init']
+2020-06-21 19:28:55,518 DEBUG    root            Running [gcloud.init] with arguments: []
+2020-06-21 19:28:55,519 INFO     ___FILE_ONLY___ Welcome! This command will take you through the configuration of gcloud.
+
+
+2020-06-21 19:28:55,522 INFO     ___FILE_ONLY___ Settings from your current configuration [default] are:
+
+2020-06-21 19:28:55,534 INFO     ___FILE_ONLY___ compute:
+  region: us-central1
+  zone: us-central1-a
+core:
+  account: hugh.shu.wang@gmail.com
+  disable_usage_reporting: 'True'
+  project: kaggle-backstage
+
+2020-06-21 19:28:55,534 INFO     ___FILE_ONLY___ 
+
+2020-06-21 19:29:10,323 INFO     ___FILE_ONLY___ Your current configuration has been set to: [default]
+
+
+2020-06-21 19:29:10,323 INFO     ___FILE_ONLY___ You can skip diagnostics next time by using the following flag:
+
+2020-06-21 19:29:10,323 INFO     ___FILE_ONLY___   gcloud init --skip-diagnostics
+
+
+2020-06-21 19:29:10,323 INFO     ___FILE_ONLY___ Network diagnostic detects and fixes local network connection issues.
+
+2020-06-21 19:29:10,325 INFO     ___FILE_ONLY___ Checking network connection...
+2020-06-21 19:29:11,344 INFO     ___FILE_ONLY___ Reachability Check passed.
+
+2020-06-21 19:29:11,344 INFO     ___FILE_ONLY___ Network diagnostic passed (1/1 checks passed).
+
+
+2020-06-21 19:48:30,030 INFO     ___FILE_ONLY___ 
+
+Command killed by keyboard interrupt
+
+

@@ -1,0 +1,8 @@
+[core]
+account = hugh.shu.wang@gmail.com
+project = kaggle-backstage
+
+[compute]
+zone = us-east1-c
+region = us-east1
+

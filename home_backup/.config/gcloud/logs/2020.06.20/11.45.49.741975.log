@@ -1,0 +1,53 @@
+2020-06-20 11:45:49,758 DEBUG    root            Loaded Command Group: [u'gcloud', u'init']
+2020-06-20 11:45:49,760 DEBUG    root            Running [gcloud.init] with arguments: []
+2020-06-20 11:45:49,761 INFO     ___FILE_ONLY___ Welcome! This command will take you through the configuration of gcloud.
+
+
+2020-06-20 11:45:49,762 INFO     ___FILE_ONLY___ Your current configuration has been set to: [default]
+
+
+2020-06-20 11:45:49,763 INFO     ___FILE_ONLY___ You can skip diagnostics next time by using the following flag:
+
+2020-06-20 11:45:49,763 INFO     ___FILE_ONLY___   gcloud init --skip-diagnostics
+
+
+2020-06-20 11:45:49,763 INFO     ___FILE_ONLY___ Network diagnostic detects and fixes local network connection issues.
+
+2020-06-20 11:45:49,764 INFO     ___FILE_ONLY___ Checking network connection...
+2020-06-20 11:45:50,783 INFO     ___FILE_ONLY___ Reachability Check passed.
+
+2020-06-20 11:45:50,784 INFO     ___FILE_ONLY___ Network diagnostic passed (1/1 checks passed).
+
+
+2020-06-20 11:48:46,612 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth']
+2020-06-20 11:48:46,831 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'login']
+2020-06-20 11:48:46,833 INFO     root            Executing: [gcloud auth login --force --brief]
+2020-06-20 11:48:46,835 DEBUG    root            Running [gcloud.auth.login] with arguments: [--brief: "True", --force: "True"]
+2020-06-20 11:48:47,077 INFO     ___FILE_ONLY___ Your browser has been opened to visit:
+
+    https://accounts.google.com/o/oauth2/auth?code_challenge=8w-p4P0Kq-acOoh6iuGqWba41Sf857m_X6jP39R7LFs&prompt=select_account&code_challenge_method=S256&access_type=offline&redirect_uri=http%3A%2F%2Flocalhost%3A8085%2F&response_type=code&client_id=32555940559.apps.googleusercontent.com&scope=openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth
+
+
+
+2020-06-20 11:48:55,348 INFO     oauth2client.client Successfully retrieved access token
+2020-06-20 11:48:55,362 INFO     root            Display format: "none"
+2020-06-20 11:48:55,366 DEBUG    root            Checking for updates...
+2020-06-20 11:48:55,612 DEBUG    root            Updating notification cache...
+2020-06-20 11:48:55,612 DEBUG    root            Activating notification: [default]
+2020-06-20 11:48:55,612 INFO     ___FILE_ONLY___ 
+
+Updates are available for some Cloud SDK components.  To install them,
+please run:
+  $ gcloud components update
+
+
+2020-06-20 11:48:55,621 INFO     ___FILE_ONLY___ 
+
+To take a quick anonymous survey, run:
+  $ gcloud survey
+
+
+2020-06-20 11:48:55,626 INFO     ___FILE_ONLY___ You are logged in as: [shuswg@gmail.com].
+
+
+2020-06-20 11:59:05,192 INFO     root            Display format: "default"
